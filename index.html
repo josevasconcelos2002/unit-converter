@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Unit Converter</title>
+</head>
+
+<body>
+    <h1 class="text-2xl/7 font-bold text-black sm:truncate sm:text-3xl sm:tracking-tight text-center mt-10 mb-10">
+    Unit Converter
+    </h1>
+
+    <div class="w-full max-w-xs mx-auto mt-10">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="length">
+                    Enter the length to convert
+                </label>
+                <input
+                    class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    id="length" type="number" placeholder="Length">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="unitFrom">
+                    Unit to convert from
+                </label>
+                <select
+                    id="unitFrom"
+                    class="shadow border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                >
+                    <option value="">Select a unit</option>
+                    <option value="m">Meters</option>
+                    <option value="cm">Centimeters</option>
+                    <option value="mm">Millimeters</option>
+                    <option value="km">Kilometers</option>
+                    <option value="in">Inches</option>
+                    <option value="ft">Foot</option>
+                    <option value="yd">Yards</option>
+                    <option value="mi">Miles</option>
+                </select>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="unitTo">
+                    Unit to convert to
+                </label>
+                <select
+                    id="unitTo"
+                    class="shadow border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                >
+                    <option value="">Select a unit</option>
+                    <option value="m">Meters</option>
+                    <option value="cm">Centimeters</option>
+                    <option value="mm">Millimeters</option>
+                    <option value="km">Kilometers</option>
+                    <option value="in">Inches</option>
+                    <option value="ft">Foot</option>
+                    <option value="yd">Yards</option>
+                    <option value="mi">Miles</option>
+                </select>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Convert
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
