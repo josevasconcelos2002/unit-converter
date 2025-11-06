@@ -12,6 +12,12 @@
     <h1 class="text-2xl/7 font-bold text-black sm:truncate sm:text-3xl sm:tracking-tight text-center mt-10 mb-10">
     Unit Converter
     </h1>
+    <div class="flex justify-center space-x-6">
+        <a href="/index.html" class="text-blue-500 hover:underline">Length</a>
+        <a href="#" class="text-blue-500 hover:underline">About</a>
+        <a href="#" class="text-blue-500 hover:underline">Contact</a>
+    </div>
+
 
     <div class="w-full max-w-xs mx-auto mt-10">
         <form id="lengthConvertForms" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -70,8 +76,26 @@
                 </button>
             </div>
         </form>
+
+
+
+
+        <form id="lengthConvertResult" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 hidden">
+            <div class="mb-4">
+                <p id="convertResult" class="block text-gray-700 text-sm font-bold mb-2">
+                </p>
+            </div>
+            
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Reset
+                </button>
+            </div>
+        </form>
     </div>
-    <script src="/app.js"></script>
+    <script src="/lengthConverter.js"></script>
 </body>
 
 </html>
