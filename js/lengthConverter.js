@@ -8,6 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const unitFrom = document.getElementById("unitFromLength");
     const unitTo = document.getElementById("unitToLength");
 
+
+    const links = document.querySelectorAll("a[href]");
+    const currentPath = window.location.pathname;
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("underline", "font-bold");
+        } else {
+            link.classList.remove("underline", "font-bold");
+        }
+    });
+    
     lengthConvertResult.addEventListener('submit', (event) => {
         event.preventDefault();
 

@@ -6,12 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const weight = document.getElementById("weight");
     const unitFrom = document.getElementById("unitFromWeight");
     const unitTo = document.getElementById("unitToWeight");
+    
+    const links = document.querySelectorAll("a[href]");
+    const currentPath = window.location.pathname;
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("underline", "font-bold");
+        } else {
+            link.classList.remove("underline", "font-bold");
+        }
+    });
 
     weightConvertResult.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        weightConvertResult.classList.add("hidden");
-        weightConvertForms.classList.remove("hidden");
+        weightConvertResult.classList.toggle("hidden");
+        weightConvertForms.classList.toggle("hidden");
 
         weight.value = "";
         unitFrom.value = "";
