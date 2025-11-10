@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
         lengthConvertResult.classList.toggle("hidden");
         lengthConvertForms.classList.toggle("hidden");
 
+        if(length.classList.contains("border-red-500"))
+            length.classList.remove("border-red-500");
+
         length.value = "";
         unitFrom.value = "";
         unitTo.value = "";
@@ -38,9 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
 
-        if (Number(length.value) <= 0 || !unitFrom.value || !unitTo.value) {
-            alert("Length must be higher than 0!");
-            length.value = 0;
+        if (Number(length.value) <= 0) {
+            alert("Length value must be greater than 0!");
+            if(!length.classList.contains("border-red-500"))
+                length.classList.add("border-red-500");
             return;
         }
 

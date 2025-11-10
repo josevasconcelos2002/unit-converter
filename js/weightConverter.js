@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         weightConvertResult.classList.toggle("hidden");
         weightConvertForms.classList.toggle("hidden");
 
+        if(weight.classList.contains("border-red-500"))
+            weight.classList.remove("border-red-500");
+
         weight.value = "";
         unitFrom.value = "";
         unitTo.value = "";
@@ -33,9 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
 
-        if (Number(weight.value) <= 0 || !unitFrom.value || !unitTo.value) {
-            alert("Weight must be higher than 0!");
-            weight.value = 0;
+        if (Number(weight.value) <= 0) {
+            alert("Weight value must be greater than 0!");
+            if(!weight.classList.contains("border-red-500"))
+                weight.classList.add("border-red-500");
             return;
         }
 

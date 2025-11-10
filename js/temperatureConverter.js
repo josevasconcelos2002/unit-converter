@@ -32,13 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     temperatureConvertForms.addEventListener('submit', (event) => {
         event.preventDefault();
 
-
-        if (Number(temperature.value) <= 0 || !unitFrom.value || !unitTo.value) {
-            alert("Temperature must be higher than 0!");
-            temperature.value = 0;
-            return;
-        }
-
         const convertedValue = convertTemperature(temperature.value, unitFrom.value, unitTo.value);
 
         temperatureConvertForms.classList.toggle("hidden");
