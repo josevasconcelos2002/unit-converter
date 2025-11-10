@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Unit Converter</title>
+
+    <link rel="stylesheet" href="/css/themes.css" />
+    <script src="/js/theme.js" defer></script>
 </head>
 
 <body>
     <h1 class="text-2xl/7 font-bold text-black sm:truncate sm:text-3xl sm:tracking-tight text-center mt-10 mb-10">
     Unit Converter
     </h1>
+    <div class="flex justify-center mb-10">
+        <select id="themeSelect" class="border p-2 rounded">
+            <option value="light">☀️ Light</option>
+            <option value="dark">🌙 Dark</option>
+            <option value="pink">💖 Pink</option>
+        </select>
+    </div>
     <div class="flex justify-center space-x-6">
         <a href="/index.html"  class="text-blue-500 hover:underline">Length</a>
         <a href="/weight.html"  class="text-blue-500 hover:underline">Weight</a>

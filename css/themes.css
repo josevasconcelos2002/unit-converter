@@ -1,0 +1,43 @@
+/* Tema claro (default) */
+body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #000000 !important;
+}
+
+body.dark-mode form {
+    background-color: #121212cf !important;
+}
+
+body.dark-mode * {
+    color: #ffffff !important;
+}
+
+body.dark-mode select option{
+    color: #000000 !important;
+}
+
+/* Pink Mode */
+body.pink-mode {
+    background-color: #ff36ab !important;
+}
+
+body.pink-mode form{
+    background-color: #ff74d4 !important;
+}
+
+body.pink-mode form button{
+    background-color: #d934ab !important;
+}
+
+body.pink-mode * {
+    color: #ffdde1 !important;
+}
+
+body.pink-mode select option{
+    color: #d934ab !important;
+}
